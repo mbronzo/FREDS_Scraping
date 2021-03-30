@@ -74,7 +74,7 @@ tnotes_tips_diff = treasury - tips
 # plot the graph
 fig, ax = plt.subplots()
 plt.plot(inflation, '-k', linewidth=2, label='Inflation 10y')
-plt.plot(tnotes_tips_diff, '--r', linewidth=2, label='Tnotes_Tips_diff')
+plt.plot(tnotes_tips_diff, '--r', linewidth=2, label='Tnotes_Tips_spread')
 plt.xticks(d, [str(dates[i])[2:12] for i in range(len(dates))], rotation=70)
 plt.locator_params(axis='x', nbins=40)
 plt.legend(loc='upper left')
