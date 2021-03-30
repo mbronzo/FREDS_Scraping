@@ -22,7 +22,10 @@ def get_data_csv(link, date):
     search.send_keys(Keys.RETURN)
 
     dlButton = browser.find_element_by_id("download-button")
-    dlButton.click()
+    
+    # to download the .csv file on your pc just uncomment this line of code
+    #dlButton.click()
+    
     wait.until(lambda driver: browser.execute_script("return $('#download-data-csv').attr('href') != '#'"))
     dlButton = browser.find_element_by_id("download-data-csv")
     csv_download_url = dlButton.get_attribute('href')
